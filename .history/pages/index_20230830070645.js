@@ -13,9 +13,8 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   useEffect(() => {
-    setTime(new Date().toISOString());
+    setTime();
   }, []);
-
   const [time, setTime] = useState();
 
   return (
@@ -27,6 +26,9 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>{time}</h1>
+        <h1>
+          <Link href="/csr">CSR로</Link>
+        </h1>
       </main>
 
       <style jsx>{`

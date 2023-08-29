@@ -27,6 +27,9 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>{time}</h1>
+        <h1>
+          <Link href="/csr">CSR로</Link>
+        </h1>
       </main>
 
       <style jsx>{`

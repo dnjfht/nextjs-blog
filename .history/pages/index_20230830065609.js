@@ -1,23 +1,16 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import { useEffect, useState } from "react";
 
-// export async function getServerSideProps() {
-//   console.log("server");
 
-//   return {
-//     props: { time: new Date().toISOString() },
-//   };
-// }
+export async function getServerSideProps() {
+  console.log("server");
+  
+  return (
+    props : {time : new Date().toISOString()}
+  )
+}
 
-export default function Home() {
-  useEffect(() => {
-    setTime(new Date().toISOString());
-  }, []);
-
-  const [time, setTime] = useState();
-
+export default function Home({time}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +19,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>{time}</h1>
+        <h1 className={styles.title}>
+          {time}
+        </h1>
       </main>
 
       <style jsx>{`

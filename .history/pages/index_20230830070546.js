@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // export async function getServerSideProps() {
 //   console.log("server");
@@ -12,10 +12,6 @@ import { useEffect, useState } from "react";
 // }
 
 export default function Home() {
-  useEffect(() => {
-    setTime(new Date().toISOString());
-  }, []);
-
   const [time, setTime] = useState();
 
   return (
@@ -27,6 +23,9 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>{time}</h1>
+        <h1>
+          <Link href="/csr">CSR로</Link>
+        </h1>
       </main>
 
       <style jsx>{`
