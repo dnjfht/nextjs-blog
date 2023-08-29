@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 export async function getServerSideProps() {
   console.log("server");
@@ -20,9 +19,6 @@ export default function Home({ time }) {
 
       <main>
         <h1 className={styles.title}>{time}</h1>
-        <h1>
-          <Link href="/csr">CSR로 이동</Link>
-        </h1>
       </main>
 
       <style jsx>{`
