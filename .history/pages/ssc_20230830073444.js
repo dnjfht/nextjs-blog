@@ -1,24 +1,16 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
-// export async function getServerSideProps() {
-//   console.log("server");
+export async function getStaticProps() {
+  console.log("server");
 
-//   return {
-//     props: { time: new Date().toISOString() },
-//   };
-// }
+  return {
+    props: { time: new Date().toISOString() },
+  };
+}
 
-export default function CSR() {
-  useEffect(() => {
-    console.log("client");
-
-    setTime(new Date().toISOString());
-  }, []);
-
-  const [time, setTime] = useState();
-
+export default function SSG({ time }) {
   return (
     <div className={styles.container}>
       <Head>

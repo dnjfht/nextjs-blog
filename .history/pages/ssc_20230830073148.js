@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // export async function getServerSideProps() {
@@ -10,7 +11,7 @@ import { useEffect, useState } from "react";
 //   };
 // }
 
-export default function CSR() {
+export default function Home() {
   useEffect(() => {
     console.log("client");
 
