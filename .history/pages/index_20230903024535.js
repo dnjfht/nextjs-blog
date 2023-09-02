@@ -12,13 +12,15 @@ export async function getServerSideProps() {
 
 export default function Home({ time }) {
   return (
-    <>
-      <h1 className={styles.title}>{time}</h1>
-      <h1>
-        <Link href="/csr">CSR로 이동</Link>
-        <Link href="/ssg">SSG로 이동</Link>
-        <Link href="/isr">ISR로 이동</Link>
-      </h1>
-    </>
+    <div className={styles.container}>
+      <>
+        <h1 className={styles.title}>{time}</h1>
+        <h1>
+          <Link href="/csr">CSR로 이동</Link>
+          <Link href="/ssg">SSG로 이동</Link>
+          <Link href="/isr">ISR로 이동</Link>
+        </h1>
+      </>
+    </div>
   );
 }
